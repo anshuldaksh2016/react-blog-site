@@ -13,7 +13,9 @@ const Home = () => {
 
     return (
         <div className="content">
-            <BlogList blogs={blogs} title="All Blogs" />
+            <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Blogs by mario " />
+            <BlogList
+                blogs={blogs.filter(blog => blog.author !== 'mario')} title="Blogs by other authors" />
         </div>
     )
 }
