@@ -2,7 +2,7 @@
 
 
 const BlogList = (props) => {
-    // we can also destructure props let it be.
+    // we can also destructure props let it be
 
     const blogs = props.blogs;
     const title = props.title;
