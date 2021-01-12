@@ -1,11 +1,13 @@
 //blog list component contains all the blogs as a list 
 
 
-const BlogList = (props) => {
+const BlogList = ({ blogs, title, handleDelete }) => {
     // we can also destructure props let it be
 
-    const blogs = props.blogs;
-    const title = props.title;
+
+
+
+
     return (
         <div className="blog-list">
             <h2>{title}</h2>
@@ -16,6 +18,7 @@ const BlogList = (props) => {
                         <div className="blog-preview" key={blog.id}>
                             <h2>{blog.title}</h2>
                             <p>Written By : {blog.author}</p>
+                            <button onClick={() => handleDelete(blog.id)} >Delete blog </button>
                         </div>
                     )
                 })
