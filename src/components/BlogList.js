@@ -1,7 +1,7 @@
 //blog list component contains all the blogs as a list 
 
-
-const BlogList = ({ blogs, title, handleDelete }) => {
+import React from "react";
+const BlogList = ({ blogs, title }) => {
     // we can also destructure props let it be
 
 
@@ -18,7 +18,7 @@ const BlogList = ({ blogs, title, handleDelete }) => {
                         <div className="blog-preview" key={blog.id}>
                             <h2>{blog.title}</h2>
                             <p>Written By : {blog.author}</p>
-                            <button onClick={() => handleDelete(blog.id)} >Delete blog </button>
+                            {/*<button onClick={() => handleDelete(blog.id)} >Delete blog </button>*/}
                         </div>
                     )
                 })
