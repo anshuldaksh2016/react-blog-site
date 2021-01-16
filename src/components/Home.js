@@ -6,8 +6,7 @@ import BlogList from './BlogList';
 const Home = () => {
 
     const [blogs, setBlogs] = useState(null);
-
-
+    const [isLoading, setIsLoding] = useState(true);
 
 
 
@@ -19,18 +18,22 @@ const Home = () => {
             })
             .then(data => {
                 setBlogs(data);
+                setIsLoding(false);
             });
     }, [])
 
     return (
-        <div className="content">
+        <div className="home">
+
+            {
+                isLoading && <div>Please Wait ..........</div>
+            }
 
             {
                 blogs && <BlogList blogs={blogs} title="Blogs by mario" />
             }
 
-            {/*<BlogList
-                blogs={blogs.filter(blog => blog.author !== 'mario')} title="Blogs by other authors" />*/}
+
         </div>
     )
 }
