@@ -11,15 +11,22 @@ const Home = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:8000/blogs')
+        fetch('http://localhost:8000/blogss')
             .then(res => {
+
+                if (!res.ok) {
+                    throw Error("Could not load the data for that resource..")
+                }
                 res.json();
                 // parses the json into js object
             })
             .then(data => {
                 setBlogs(data);
                 setIsLoding(false);
-            });
+            })
+            .catch(err => {
+                console.log(err.message);
+            })
     }, [])
 
     return (
