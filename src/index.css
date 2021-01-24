@@ -1,59 +1,50 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
-/* colors used : #4338ca */
+/* base styles */
 * {
   margin: 0;
-  font-family: "Josefin";
+  font-family: "Quicksand";
   color: #333;
 }
-body {
-  background-color: #eff6ff;
-}
-
 .navbar {
   padding: 20px;
   display: flex;
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
-  border-bottom: 1px solid #ff22ff;
-  background-color: #4338ca;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom: 1px solid #f2f2f2;
 }
-
+.navbar h1 {
+  color: #f1356d;
+}
 .navbar .links {
   margin-left: auto;
 }
-
-.navbar h2 {
-  color: white;
-  cursor: pointer;
-}
 .navbar a {
-  text-decoration: none;
   margin-left: 16px;
+  text-decoration: none;
   padding: 6px;
-  color: white;
 }
-
 .navbar a:hover {
-  color: #064e3b;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  color: #f1356d;
 }
-
 .content {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
 }
 
+/* blog previews / list */
 .blog-preview {
-  margin: 10px;
-  padding: 1rem;
+  padding: 10px 16px;
+  margin: 20px 0;
   border-bottom: 1px solid #fafafa;
 }
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
 .blog-preview h2 {
-  color: #831843;
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
 }

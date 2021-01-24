@@ -12,3 +12,5 @@ function App() {
 }
 
 export default App;
+
+//npx json-server --watch Data/db,json --port 8000
