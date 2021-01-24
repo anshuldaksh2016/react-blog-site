@@ -1,0 +1,12 @@
+//import react from "react";
+
+const CreateBlog = () => {
+
+    return (
+        <div className="create">
+            <h2>Add new Blog !</h2>
+        </div>
+    );
+}
+
+export default CreateBlog;
